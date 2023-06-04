@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Poppins;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-[#1A1A40];
+  }
+  .section {
+    @apply py-10 Sdesktop:py-28;
+  }
+  .title,
+  .section-title {
+    @apply text-3xl Sdesktop:text-5xl mb-6 font-bold;
+  }
+  .pretitle {
+    @apply Sdesktop:text-lg text-[20px] text-accent mb-8  uppercase font-bold;
+  }
+  .text-title {
+    @apply bg-gradient-to-br from-[#410cd9] to-[#f68efe] bg-clip-text text-transparent;
+  }
+  .lead {
+    @apply Sdesktop:text-[16px] text-desc font-normal mb-6;
+  }
+  .pricing-table {
+    @apply shadow-[7px_15px_13px_4px_rgba(0,0,0,0.15)] rounded  border p-8 border-solid border-[#e4e4e4]
+    bg-[#fff];
+  }
+  .gambar-katalog {
+    @apply shadow-[7px_10px_#AA6947] rounded-[15px];
+  }
+  .btn {
+    @apply rounded-full transition flex justify-center items-center;
+  }
+  .btn2 {
+    @apply rounded-md transition flex justify-center items-center;
+  }
+  .btn-lg {
+    @apply w-full px-6 py-3 text-lg font-normal;
+  }
+  .btn-Sdesktop2 {
+    @apply text-lg font-normal;
+  }
+  .btn-md {
+    @apply h-[60px] px-[16px] text-lg font-normal;
+  }
+  .btn-sm {
+    @apply h-[48px] px-[16px] text-lg font-normal;
+  }
+  .btn-accent {
+    @apply text-white bg-accent  hover:bg-accent;
+  }
+  .btn-white {
+    @apply text-accent bg-white hover:bg-white/90;
+  }
+  .btn-outline {
+    @apply bg-transparent text-accent  border border-accent  hover:bg-accent hover:text-white;
+  }
+  .btn-link {
+    @apply text-accent bg-accent text-xl Sdesktop:text-2xl;
+  }
+}
+
+@layer utilities {
+  .containers {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
