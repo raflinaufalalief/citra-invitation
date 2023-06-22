@@ -1,20 +1,31 @@
 // import images
 import LogoImg from "../assets/logo.png"
 import HeroImg from "../assets/HERO.png"
-import CardIconImg1 from "../assets/icons/design.png"
-import CardIconImg2 from "../assets/icons/calender.png"
-import CardIconImg3 from "../assets/icons/gallery.png"
+import image from "../assets/wedding.png"
+import CardIconImg1 from "../assets/icons/responsive2.png"
+import CardIconImg2 from "../assets/icons/calendar.png"
+import CardIconImg3 from "../assets/icons/gallery2.png"
 import CardIconImg4 from "../assets/icons/navigation.png"
 import CardIconImg5 from "../assets/icons/music.png"
 import CardIconImg6 from "../assets/icons/moment.png"
 import CardIconImg7 from "../assets/icons/amplop.png"
 import CardIconImg8 from "../assets/icons/love.png"
+import TestiCard1 from "../assets/testimoni-1.jpg"
+import TestiCard2 from "../assets/testimoni-2.jpg"
+import TestiCard3 from "../assets/testimoni-3.jpg"
+import TestiCard4 from "../assets/testimoni-4.jpg"
+import TestiCard5 from "../assets/testimoni-5.jpg"
+import ImgCard1 from "../assets/icons/bca.png"
+import ImgCard2 from "../assets/icons/bersama.png"
+import ImgCard3 from "../assets/icons/bni.png"
+import ImgCard5 from "../assets/icons/bri.png"
+import ImgCard4 from "../assets/icons/dana.png"
+import ImgCard6 from "../assets/icons/mandiri.png"
+import ImgCard7 from "../assets/icons/ovo.png"
+import ImgCard8 from "../assets/icons/gopay.png"
 
 // export components
-export const header = {
-  logo: LogoImg,
-  btnText: "Pesan Sekarang",
-}
+
 export const dataNavLink = [
   { id: 1, name: "Home", path: "/#home" },
   { id: 2, name: "Katalog", path: "/#katalog" },
@@ -36,70 +47,78 @@ export const hero = {
   title: "JASA PEMBUATAN UNDANGAN DIGITAL",
 
   subtitle:
-    "This template is brought to you by TemplateMo website. Feel free to use this for a commercial purpose. You are not allowed to redistribute the template ZIP file on any other template website. Thank you.",
-  btnText: "Pesan Sekarang",
+    "Temukan kemudahan, keindahan, dan efisiensi dalam mengundang tamu dengan Citra-Invitation",
+  btnText: "Buat undangan",
   image: HeroImg,
 }
 
 export const features = {
   feature1: {
-    pretitle: "make it easy",
+    image: image,
     title: "Apa Itu ",
     subtitle:
-      "We hope this DigiMedia template is useful for your work. You can use this template for any purpose. You may contribute a little amount via PayPal to support TemplateMo in creating new templates regularly.",
+      "Undangan digital adalah inovasi modern yang mengubah cara tradisional mengirim undangan. Dalam era digital, undangan digital dikirim secara elektronik melalui email, pesan teks, atau platform undangan online. Keuntungan utamanya adalah kemudahan pengiriman, pelacakan RSVP, fleksibilitas desain, dan ramah lingkungan. Undangan digital efisien, praktis, dan populer dalam mengadakan acara saat ini.",
+    desc: "Undangan ini biasa disebut dengan ",
   },
 }
 
 export const product = {
   title: "Fitur Unggulan",
-  subtitle: "Fitur Undangan Online",
+  subtitle: "Fitur Undangan Digital",
   cards: [
     {
       icon: CardIconImg1,
-      title: "Design Modern dan Responsive",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      title: "Design Modern & Responsive",
+      subtitle:
+        "Tampilan desain responsif dan elegant pada undangan online di semua perangkat",
       delay: 200,
     },
     {
       icon: CardIconImg2,
-      title: "Menambahkan ke kalender",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      title: "Menambahkan ke kalendar",
+      subtitle: "Anda untuk melihat dan mengatur jadwal acara dengan cepat",
       delay: 400,
     },
     {
       icon: CardIconImg3,
       title: "Gallery Foto",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      subtitle:
+        "Anda untuk memamerkan momen-momen berharga acara Anda dengan mudah dan elegan ",
       delay: 600,
     },
     {
       icon: CardIconImg4,
       title: "Navigasi Lokasi",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      subtitle:
+        "Anda dapat menjelajahi koleksi foto acara Anda secara praktis dan intuitif ",
       delay: 600,
     },
     {
       icon: CardIconImg5,
       title: "Background Musik",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      subtitle:
+        "Anda dapat memilih untuk menambahkan musik sesuai dengan keinginan anda",
       delay: 600,
     },
     {
       icon: CardIconImg6,
       title: "Berbagi moment indah dan Ucapan",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      subtitle:
+        "Anda dapat berbagi moment dengan tamu dengan mengirimkan gambar dan ucapan",
       delay: 600,
     },
     {
       icon: CardIconImg7,
       title: "Amplop Digital",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      subtitle:
+        "Tamu undangan dapat membuka amplop digital dengan satu klik dan langsung melihat konten undangan Anda.",
       delay: 600,
     },
     {
       icon: CardIconImg8,
-      title: "Love Story dan Quotes",
-      subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+      title: "Love Story & Quotes",
+      subtitle:
+        "Ceritakan kisah cinta Anda dalam bentuk yang kreatif dan personal",
       delay: 600,
     },
   ],
@@ -107,11 +126,11 @@ export const product = {
 
 export const testimonials = {
   title: "Testimoni",
-  subtitle: "Elit esse cillum dolore eu fugiat nulla pariatur",
+  subtitle:
+    "Bukti nyata bahwa Citra Invitation telah menjadi bagian kebahagiaan momen terbaik mereka",
   clients: [
     {
-      imageUrl:
-        "https://undangan-html.netlify.app/assets/images/wedding_banner22.png",
+      imageUrl: TestiCard1,
       imageAlt: "testing",
       from: "Desi & Aldi",
       title: "Jumat, 20 Oktober 2021",
@@ -120,8 +139,8 @@ export const testimonials = {
       rating: 4,
     },
     {
-      imageUrl:
-        "https://undangan-html.netlify.app/assets/images/wedding_banner22.png",
+      imageUrl: TestiCard2,
+      imageAlt: "testing",
       imageAlt: "testing",
       from: "Desi & Aldi",
       title: "Jumat, 20 Oktober 2021",
@@ -130,8 +149,7 @@ export const testimonials = {
       rating: 4,
     },
     {
-      imageUrl:
-        "https://undangan-html.netlify.app/assets/images/wedding_banner22.png",
+      imageUrl: TestiCard3,
       imageAlt: "testing",
       from: "Desi & Aldi",
       title: "Jumat, 20 Oktober 2021",
@@ -140,8 +158,7 @@ export const testimonials = {
       rating: 4,
     },
     {
-      imageUrl:
-        "https://undangan-html.netlify.app/assets/images/wedding_banner22.png",
+      imageUrl: TestiCard4,
       imageAlt: "testing",
       from: "Desi & Aldi",
       title: "Jumat, 20 Oktober 2021",
@@ -150,8 +167,7 @@ export const testimonials = {
       rating: 4,
     },
     {
-      imageUrl:
-        "https://undangan-html.netlify.app/assets/images/wedding_banner22.png",
+      imageUrl: TestiCard5,
       imageAlt: "testing",
       from: "Desi & Aldi",
       title: "Jumat, 20 Oktober 2021",
@@ -163,13 +179,14 @@ export const testimonials = {
 }
 
 export const dataPaket = {
-  title: "Pilih Paket",
-  subtitle: "We hope this DigiMedia template is useful for your work",
+  title: "Daftar Harga",
+  subtitle:
+    "Pilih dari berbagai paket yang kami tawarkan, sesuai dengan kebutuhan anda!",
   cards: [
     {
-      id: 1,
+      id: 0,
       title: "Standard",
-      price: "200K",
+      price: "150K",
       description: [
         { titleDesc: "Desain Basic" },
         {
@@ -200,12 +217,12 @@ export const dataPaket = {
         },
       ],
       btnText: "Pesan Sekarang",
-      borderColor: "#1D267D",
+      borderColor: "#361500",
     },
     {
-      id: 2,
+      id: 1,
       title: "Premium",
-      price: "400K",
+      price: "300K",
       description: [
         { titleDesc: "Semua Fitur Basic" },
         {
@@ -241,12 +258,12 @@ export const dataPaket = {
         },
       ],
       btnText: "Pesan Sekarang",
-      borderColor: "#5C469C",
+      borderColor: "#411530",
     },
     {
-      id: 3,
+      id: 2,
       title: "Exclusive",
-      price: "1Jt",
+      price: "450Jt",
       description: [
         { titleDesc: "Semua Fitur Premium" },
         {
@@ -270,9 +287,80 @@ export const dataPaket = {
         },
       ],
       btnText: "Pesan Sekarang",
-      borderColor: "#0C134F",
+      borderColor: "#262A56",
     },
   ],
 }
 
-export const faq = {}
+export const faq = {
+  title: "Pertanyaan",
+  subtitle:
+    "Berikut ini jawaban dari pertanyaan yang paling sering diajukan. Jika pertanyaan kamu masih belum juga terjawab, silakan menghubungi kami.",
+  accordions: [
+    {
+      id: 1,
+      question: "Berapa Lama pengerjaan undangan website?",
+      answer:
+        "Estimasi pengerjaan undangan website bisa selesai dalam waktu 1-3 hari jika kamu melakukan pembayaran dan pengisian data dengan lengkap.",
+    },
+    {
+      id: 2,
+      question: "Apakah bisa custom Tema sesuai dengan keinginan saya?",
+      answer:
+        "Anda dapat meminta tema khusus ke admin melalui obrolan whatsaap. Tema khusus selain tema yang disediakan bisa hubungi admin melalui whats'app",
+    },
+    {
+      id: 3,
+      question:
+        "Apa saja yang perlu saya siapkan untuk membuat undangan online?",
+      answer:
+        "cukup klik pesan sekarang / lansung via Chat Whatsapp, kemudian isi informasi mempelai ,lokasi akad nikah , reesepsi, foto dan video prawedding (jika ada), backgroud music, dan informasi lainnya yang dibutuhkan.",
+    },
+    {
+      id: 4,
+      question: "Bagaimana cara membuat undangannya?",
+      answer:
+        "Pilih paket yang diinginkan, klik pesan & pilih metode pembayarannya. Setelah pembayaran terverifikasi, kamu dapat mengisi data dirimu & pasangan, data acara, foto-foto dan data lainnya yang dibutuhkan",
+    },
+  ],
+}
+
+export const footer = {
+  logo: LogoImg,
+  description: [
+    {
+      id: "1",
+      icon1: ImgCard1,
+    },
+    {
+      id: "2",
+      icon1: ImgCard2,
+    },
+    {
+      id: "3",
+      icon1: ImgCard3,
+    },
+    {
+      id: "5",
+      icon1: ImgCard4,
+    },
+  ],
+  subdecsripton: [
+    {
+      id: "4",
+      icon2: ImgCard5,
+    },
+    {
+      id: "6",
+      icon2: ImgCard6,
+    },
+    {
+      id: "7",
+      icon2: ImgCard7,
+    },
+    {
+      id: "8",
+      icon2: ImgCard8,
+    },
+  ],
+}

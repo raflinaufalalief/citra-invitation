@@ -1,5 +1,4 @@
-import { Box, Image } from "@chakra-ui/react"
-import { StarIcon } from "@chakra-ui/icons"
+import { AiFillStar } from "react-icons/ai"
 import React from "react"
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -8,6 +7,7 @@ import { Autoplay } from "swiper"
 // import swiper styles
 import "swiper/css"
 import "swiper/css/autoplay"
+
 const CardTestimoni = ({ clients }) => {
   return (
     <Swiper
@@ -15,7 +15,6 @@ const CardTestimoni = ({ clients }) => {
       autoplay={true}
       slidesPerView={1}
       spaceBetween={30}
-      grabCursor={true}
       breakpoints={{
         640: {
           slidesPerView: 1,
@@ -42,57 +41,37 @@ const CardTestimoni = ({ clients }) => {
         return (
           // slide
           <SwiperSlide key={index}>
-            <Box
-              maxW="sm"
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              shadow="xl"
-            >
-              <Image src={imageUrl} alt={imageAlt} />
-
-              <Box p="6">
-                <Box display="flex" alignItems="baseline">
-                  <Box
-                    color="purple.500"
-                    fontWeight="semibold"
-                    letterSpacing="wide"
-                    fontSize="xs"
-                    textTransform="uppercase"
-                  >
+            <div className="overflow-hidden text-center border shadow-xl rounded-xl ">
+              <img
+                src={imageUrl}
+                alt={imageAlt}
+                className="object-cover mt-5 bg-center bg-no-repeat rounded-full  w-[100px] h-[100px] mx-auto"
+              />
+              <div className="p-4">
+                <div className="flex align-baseline">
+                  <div className="mx-auto text-xs font-semibold tracking-wide uppercase text-accent">
                     {from}
-                  </Box>
-                </Box>
-
-                <Box
-                  mt="1"
-                  fontWeight="light"
-                  as="h4"
-                  lineHeight="tight"
-                  noOfLines={1}
-                >
-                  {title}
-                </Box>
-
-                <Box lineHeight="tight" fontWeight="light">
-                  {desc}
-                </Box>
-
-                <Box display="flex" mt="2" alignItems="center">
-                  {Array(5)
-                    .fill("")
-                    .map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        color={i < rating ? "yellow.300" : "gray.300"}
-                      />
-                    ))}
-                  <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                    {reviewCount} reviews
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
+                  </div>
+                </div>
+                <div className="mt-1 font-medium">{title}</div>
+                <div className="font-light text-center ">{desc}</div>
+              </div>
+              <div className="flex items-center justify-center pb-3">
+                {Array(5)
+                  .fill("")
+                  .map((_, i) => (
+                    <AiFillStar
+                      key={i}
+                      className={` ${
+                        i < rating ? "text-yellow-500" : "text-gray-500"
+                      }`}
+                    />
+                  ))}
+                <div className="ml-2 text-sm text-gray-600 mobile:flex">
+                  {reviewCount} <span>reviews</span>
+                </div>
+              </div>
+            </div>
           </SwiperSlide>
         )
       })}

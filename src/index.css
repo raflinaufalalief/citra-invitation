@@ -9,29 +9,14 @@
     @apply font-Poppins;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-[#1A1A40];
+  section {
+    @apply py-10 Sdesktop:py-28 w-full;
   }
-  .section {
-    @apply py-10 Sdesktop:py-28;
-  }
-  .title,
-  .section-title {
-    @apply text-3xl Sdesktop:text-5xl mb-6 font-bold;
-  }
-  .pretitle {
-    @apply Sdesktop:text-lg text-[20px] text-accent mb-8  uppercase font-bold;
-  }
-  .text-title {
-    @apply bg-gradient-to-br from-[#410cd9] to-[#f68efe] bg-clip-text text-transparent;
+  .title {
+    @apply tablet:text-3xl Sdesktop:text-4xl mobile:text-2xl mb-5 font-bold;
   }
   .lead {
-    @apply Sdesktop:text-[16px] text-desc font-normal mb-6;
+    @apply Sdesktop:text-lg tablet:text-lg mobile:text-base text-desc  font-normal mb-5;
   }
   .pricing-table {
     @apply shadow-[7px_15px_13px_4px_rgba(0,0,0,0.15)] rounded  border p-8 border-solid border-[#e4e4e4]
@@ -40,23 +25,20 @@
   .gambar-katalog {
     @apply shadow-[7px_10px_#AA6947] rounded-[15px];
   }
-  .btn {
-    @apply rounded-full transition flex justify-center items-center;
-  }
   .btn2 {
-    @apply rounded-md transition flex justify-center items-center;
+    @apply rounded-xl transition flex justify-center items-center;
   }
   .btn-lg {
-    @apply w-full px-6 py-3 text-lg font-normal;
+    @apply w-full px-6 py-4 text-lg font-normal;
   }
-  .btn-Sdesktop2 {
+  .btn-lg2 {
     @apply text-lg font-normal;
   }
   .btn-md {
     @apply h-[60px] px-[16px] text-lg font-normal;
   }
   .btn-sm {
-    @apply h-[48px] px-[16px] text-lg font-normal;
+    @apply h-[50px] px-[8px] text-base font-normal;
   }
   .btn-accent {
     @apply text-white bg-accent  hover:bg-accent;
@@ -65,7 +47,10 @@
     @apply text-accent bg-white hover:bg-white/90;
   }
   .btn-outline {
-    @apply bg-transparent text-accent  border border-accent  hover:bg-accent hover:text-white;
+    @apply bg-transparent text-accent border border-accent  hover:bg-accent hover:text-white;
+  }
+  .btn-line {
+    @apply bg-accent text-white border border-accent  hover:bg-accent/70  hover:text-white;
   }
   .btn-link {
     @apply text-accent bg-accent text-xl Sdesktop:text-2xl;

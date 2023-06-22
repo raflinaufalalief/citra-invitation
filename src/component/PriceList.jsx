@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 // import data
 import { dataPaket } from "../data/data"
 // import icons
@@ -6,29 +7,25 @@ import { HiCheck, HiShoppingCart } from "react-icons/hi"
 
 const PriceList = () => {
   // index state
-  const [index, setIndex] = useState(false)
   // destructure pricing
   const { title, subtitle, cards } = dataPaket
   return (
     <section id="harga" className="section">
-      <div className="container mx-auto">
-        <h1 className="flex items-center justify-center mb-2 text-xl font-bold uppercase text-accent">
-          Harga Paket
-        </h1>
-        {/* title */}
+      <div className="mx-auto containers Sdesktop:px-6 mobile:px-6 tablet:px-6 ">
         <h2
-          className="mb-2 text-center title lg:mb-7 "
+          className="text-center title"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {title}
+          {title}&nbsp;
+          <span className=" text-accent">Paket</span>
         </h2>
         <p className="mb-10 text-center lead">{subtitle}</p>
         {/* cards */}
-        <div className="gap-x-4 flex flex-col Sdesktop:flex-row lg:gap-x-5 gap-y-[30px] lg:gap-y-0 justify-center items-center">
+        <div className="gap-x-4 flex flex-col Sdesktop:flex-row Sdesktop:gap-x-5 gap-y-[30px] lg:gap-y-0 justify-center items-center">
           {cards.map((card, cardIndex) => {
             // data card
-            const { title, price, btnText, borderColor, description } = card
+            const { title, price, borderColor, description } = card
             // card
             return (
               <div
@@ -38,7 +35,7 @@ const PriceList = () => {
                 key={cardIndex}
               >
                 <div
-                  className="mx-auto rounded-md cursor-pointer max-w-[350px] pricing-table "
+                  className="mx-auto rounded-xl cursor-pointer max-w-[350px] pricing-table "
                   style={{ backgroundColor: borderColor }}
                 >
                   {/* card title */}
@@ -72,16 +69,13 @@ const PriceList = () => {
                       )
                     })}
                   </div>
-                  {/* btn */}
-                  <div className="">
-                    <button
-                      onClick={() => setIndex(cardIndex)}
-                      className=" text-white btn2 btn-lg space-x-[14px] bg-accent hover:bg-accent/70  transition-all"
-                    >
-                      <span>{btnText}</span>
+                  <div>
+                    <button className=" text-white btn2 btn-lg space-x-[14px] bg-accent hover:bg-accent/70 transition-all">
+                      <Link to={`/order/${card.id}`}>Pesan Sekarang</Link>
                       <HiShoppingCart />
                     </button>
                   </div>
+                  {/* btn */}
                 </div>
               </div>
             )

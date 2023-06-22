@@ -1,0 +1,7 @@
+{
+  "dataPaket": [
+    { "id": 0, "title": "Standard" },
+    { "id": 1, "title": "Premium" },
+    { "id": 2, "title": "Exclusive" }
+  ]
+}

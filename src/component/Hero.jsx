@@ -25,10 +25,10 @@ const Hero = () => {
     }
   }, [])
   // destructure hero data
-  const { title, pretitle, subtitle, btnText, image } = hero
+  const { title, subtitle, btnText, image } = hero
   return (
     <section
-      className="section w-full bg-[#E9DED8] overflow-x-hidden relative overflow-y-hidden"
+      className="relative w-full overflow-x-hidden overflow-y-hidden bg-bg section"
       id="home"
     >
       <img
@@ -41,29 +41,31 @@ const Hero = () => {
         alt=""
         className="absolute w-[300px] right-0  bottom-0 opacity-70 mobile:w-[250px] tablet:top-[200px] "
       />
-      <div className="pt-20 containers ">
-        <div className="flex items-center text-center Sdesktop:justify-between mobile:flex-col gap-y-8 Sdesktop:gap-y-0 mobile:justify-center Sdesktop:text-left tablet:px-6 Sdesktop:px-6 mobile:px-6 ">
+      <div className="mx-auto containers mobile:pt-24 tablet:pt-28">
+        <div className="flex items-center text-center Sdesktop:justify-between mobile:flex-col gap-y-8 Sdesktop:gap-y-0 mobile:justify-center Sdesktop:text-left tablet:px-6 tablet:text-left Sdesktop:px-6">
           {/* text */}
-          <div className="Sdesktop:w-[500px] mobile:z-10 tablet:z-10">
-            <h1 className="mb-2 title Sdesktop:mb-5 ">
+          <div className="Sdesktop:w-[500px] tablet:w-[350px] mobile:w-[350px] mobile:z-10 tablet:z-10 ">
+            <h1 className="mb-5 text-desc title ">
               {title}
               <br /> <span className="uppercase text-accent" ref={el} />
             </h1>
-            <p className="mb-5 lead Sdesktop:mb-10">{subtitle}</p>
+            <p className="lead">{subtitle}</p>
             {/* btn & comp text */}
-            <div className="flex items-center max-w-sm mx-auto Sdesktop:max-w-full Sdesktop:mx-0 gap-x-2 Sdesktop:gap-x-6">
-              <button className="flex items-center justify-center mx-auto Sdesktop:mx-0 btn btn-sm Sdesktop:btn-md Sdesktop:btn-lg2 btn-outline Sdesktop:gap-x-4">
-                {btnText}
-                <HiOutlineChevronDown />
-              </button>
+            <div>
+              <a href="/#harga">
+                <button className="flex items-center justify-center mx-auto Sdesktop:mx-0 tablet:mx-0 btn2 mobile:btn-sm Sdesktop:btn-md tablet:btn-sm Sdesktop:btn-lg2 btn-line Sdesktop:gap-x-4 tablet:gap-x-2 mobile:gap-x-1">
+                  {btnText}
+                  <HiOutlineChevronDown />
+                </button>
+              </a>
             </div>
           </div>
           {/* image */}
-          <div className="">
+          <div className="Sdesktop:pt-20 mobile:pt-10">
             <img
               src={image}
               alt="hero"
-              className="Sdesktop:w-[400px] mobile:w-[350px] mobile:z-10 tablet:z-10"
+              className="Sdesktop:w-[400px] mobile:w-[300px] tablet:w-[350px] "
             />
           </div>
         </div>

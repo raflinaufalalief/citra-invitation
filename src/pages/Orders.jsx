@@ -1,14 +1,8 @@
 import React from "react"
 import NavbarOrder from "../component/NavbarOrder"
-import Order from "./Order"
 
 const Orders = () => {
-  return (
-    <div>
-      <NavbarOrder />
-      <Order />
-    </div>
-  )
+  return <div></div>
 }
 
 export default Orders

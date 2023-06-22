@@ -6,6 +6,9 @@ import PaketDetail from "../component/PriceList"
 import Testimoni from "../component/Testimoni"
 import Faq from "../component/Faq"
 import Navbar from "../component/Navbar"
+import Footer from "../component/Footer"
+import CopyRight from "../component/CopyRight"
+import Payment from "../component/Payment"
 
 const Home = () => {
   return (
@@ -18,6 +21,8 @@ const Home = () => {
       <Fitur />
       <Testimoni />
       <Faq />
+      <Footer />
+      <CopyRight />
     </div>
   )
 }

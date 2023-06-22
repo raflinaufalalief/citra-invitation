@@ -9,9 +9,12 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 z-20 w-full shadow-md bg-bg">
-      <div className="containers py-7 mobile:mx-4 tablet:mx-6">
+      <div className="containers py-7 mobile:mx-4 tablet:mx-6 ">
         <div className="flex justify-between Sdesktop:items-center">
-          <img src={logo} alt="logo" className="w-[250px] mobile:w-[200px]" />
+          <a href="/#home">
+            <img src={logo} alt="logo" className="w-[250px] mobile:w-[200px]" />
+          </a>
+
           <nav className="flex items-center">
             <div
               className="text-2xl font-extrabold icon_humberger Sdesktop:hidden"
@@ -19,7 +22,7 @@ const Navbar = () => {
             >
               <HiMenu />
             </div>
-            <ul className="">
+            <ul>
               <div
                 className={`transition-all ease-in-out duration-200 mobile:absolute mobile:mt-10 mobile:bg-bg mobile:w-full mobile:p-4 tablet:absolute Sdesktop:flex Sdesktop:gap-x-9 Sdesktop:items-center tablet:mt-10 tablet:bg-bg tablet:w-full tablet:p-5 z-20 ${
                   menu ? "right-0" : "right-[-1500px]" /*  && 'hidden' */
@@ -29,16 +32,16 @@ const Navbar = () => {
                   <li
                     onClick={() => setMenu((prev) => !prev)}
                     key={index}
-                    className="text-lg font-normal list hover:text-accent text-black/75 mobile:space-y-3 mobile:my-3 tablet:my-4"
+                    className="text-lg font-normal list hover:text-accent text-desc mobile:space-y-3 mobile:my-3 tablet:my-4"
                   >
                     <a href={result.path}>{result.name}</a>
                   </li>
                 ))}
                 <button
                   onClick={() => setMenu((prev) => !prev)}
-                  className="px-5 py-3 rounded-md hover:bg-text Sdesktop:font-medium mobile:mt-4 tablet:mt-4 text-bg bg-accent"
+                  className="btn2 btn-sm btn-outline"
                 >
-                  <Link to={"/order"}>Order Sekarang</Link>
+                  <Link to={"/order"}>Pesan Sekarang</Link>
                 </button>
               </div>
             </ul>

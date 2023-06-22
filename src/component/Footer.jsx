@@ -1,41 +1,106 @@
-import { useState } from "react"
-import { FloatingWhatsApp } from "react-floating-whatsapp"
-import { IoCaretDown, IoCloseCircle, IoLogoWhatsapp } from "react-icons/io5"
+import React from "react"
+import { footer } from "../data/data"
+import IconFooter1 from "../assets/icons/instagram.png"
+import IconFooter2 from "../assets/icons/whatsapp.png"
+import IconFooter3 from "../assets/icons/gmail.png"
+import IconFooter4 from "../assets/icons/tik-tok.png"
+
 const Footer = () => {
-  const [closeFloting, setCloseFloting] = useState(false)
-
-  const close = () => setCloseFloting((prev) => !prev)
+  // data
+  const { logo, links, description, subdecsripton } = footer
   return (
-    <div>
-      <div className="fixed right-[100px] bottom-[90px] z-10 ">
-        <IoCloseCircle
-          onClick={close}
-          className={`absolute top-[-80px] right-[20px] text-3xl z-10 text-accent cursor-pointer shadow-lg rounded-full ${
-            closeFloting ? "hidden" : ""
-          }`}
-        />
-        <div
-          className={`absolute bg-white w-fit  top-[-63px] left-[-150px] px-2 py-2 rounded-lg flex shadow-md ${
-            closeFloting ? "hidden" : ""
-          }`}
-        >
-          <h1>Mau tanya-tanya dulu? Char aja ngab</h1>
-        </div>
+    <section className="section">
+      <div className="mx-auto containers Sdesktop:px-6 mobile:px-6 tablet:px-6">
+        <div className="flex flex-col items-center text-center Sdesktop:flex-row Sdesktop:items-start Sdesktop:text-left Sdesktop:justify-between gap-y-8">
+          {/* list 1 */}
+          <div className="Sdesktop:w-[300px] tablet:w-[280px]">
+            <h1 className="mb-6 text-2xl font-medium ">Tentang Kami</h1>
+            {/* <ul className="flex flex-col gap-y-2">
+              {links.map((item, index) => {
+                // data
+                const { href, name } = item
+                return (
+                  <li key={index}>
+                    <a className="transition hover:text-accent" href={href}>
+                      {name}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul> */}
+            <p className="mobile:text-center tablet:text-center Sdesktop:text-left lead">
+              Citra Invitation adalah sebuah platform undangan online yang
+              didedikasikan untuk membantu Anda menciptakan undangan yang indah,
+              kreatif, dan mudah dibagikan. Dengan fokus pada kualitas dan
+              kemudahan penggunaan, kami memahami pentingnya momen khusus dalam
+              hidup Anda.
+            </p>
+          </div>
+          {/* list 2 */}
+          <div>
+            <h1 className="mb-6 text-2xl font-medium text-center ">
+              Metode Pembayaran
+            </h1>
+            <ul className="flex items-center justify-center mt-8 gap-y-3">
+              {description.map((description, index) => {
+                // data
+                const { icon1 } = description
+                return (
+                  <li key={index} className="w-[90px] p-4">
+                    <img src={icon1} alt="" className="" />
+                  </li>
+                )
+              })}
+            </ul>
+            <div>
+              <ul className="flex items-center justify-center mt-8 gap-y-3">
+                {subdecsripton.map((description, index) => {
+                  // data
+                  const { icon2 } = description
+                  return (
+                    <li className="w-[90px] p-4" key={index}>
+                      <img src={icon2} alt="" className="" />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          </div>
 
-        <IoCaretDown
-          className={`absolute top-[-30px] right-[70px] text-2xl text-white shadow-full ${
-            closeFloting ? "hidden" : ""
-          }`}
-        />
-        <a
-          href="https://wa.me/6285648355728?text=Bang%20Order"
-          className="flex items-center px-8 py-4 text-white rounded-full gap-x-2 bg-accent"
-        >
-          <IoLogoWhatsapp />
-          What'sApp
-        </a>
+          {/* nlist 3 */}
+          <div>
+            <h1 className="justify-center mb-6 text-2xl font-medium ">
+              Kontak Kami
+            </h1>
+            <div className="flex items-center mb-4 mobile:justify-center tablet:justify-center gap-x-2">
+              <div>
+                <img src={IconFooter4} alt="" />
+              </div>
+              <p>CitraInvitation</p>
+            </div>
+            <div className="flex items-center mb-4 mobile:justify-center tablet:justify-center gap-x-2 ">
+              <div>
+                <img src={IconFooter1} alt="" />
+              </div>
+              <p>CitraInvitation</p>
+            </div>
+            <div className="flex items-center mb-4 mobile:justify-center tablet:justify-center gap-x-2">
+              <div>
+                <img src={IconFooter2} alt="" />
+              </div>
+              <p>0856-4835-5728</p>
+            </div>
+
+            <div className="flex items-center mb-4 mobile:justify-center tablet:justify-center gap-x-2">
+              <div>
+                <img src={IconFooter3} alt="" />
+              </div>
+              <p>citrainvitation@gmail.com</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

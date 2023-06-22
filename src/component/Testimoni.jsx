@@ -7,23 +7,20 @@ import CardTestimoni from "./CardTestimoni"
 
 const Testimonials = () => {
   // destructure testimonials
-  const { title, clients } = testimonials
+  const { title, subtitle, clients } = testimonials
   return (
     <section className="section" id="testimoni">
-      <div className="container mx-auto">
+      <div className="container mx-auto text-center Sdesktop:px-6 tablet:px-6 mobile:px-6 ">
         {/* title */}
         <h1
-          className="flex items-center justify-center mb-2 text-xl font-bold uppercase text-accent"
+          className="flex items-center justify-center mb-2 title "
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {title}
+          {title}&nbsp;<span className=" text-accent">Pelanggan</span>
         </h1>
-        <p className="mb-2 text-center title lg:mb-7 ">Apa Kata Mereka?</p>
-        <p className="mb-10 text-center lead">
-          We hope this DigiMedia template is useful for your work. You can use
-          this template for any purpose.
-        </p>
+        <p className=" lead">{subtitle}</p>
+
         {/* slider */}
         <div data-aos="fade-up" data-aos-delay="400">
           <CardTestimoni clients={clients} />

@@ -1,19 +1,15 @@
 import React from "react"
 import Router from "./router/Router"
-import { ChakraProvider } from "@chakra-ui/react"
 import Header from "./component/Header"
-import Navbar from "./component/Navbar"
-import Footer from "./component/Footer"
+import Floating from "./component/Floating"
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
-      <ChakraProvider>
-        <Router />
-      </ChakraProvider>
-      <Footer />
-    </>
+      <Router />
+      <Floating />
+    </div>
   )
 }
 
